@@ -1,0 +1,80 @@
+// 图片轮换
+$.fn.imageSwitch = function (options) {
+    // 默认设置
+    var autoFocus;
+    var focusId = 1;
+    var focusLength = 0;
+    var _this = $(this);
+    var settings = $.extend({
+        "speed": 500, // 切换速度
+        "timeout": 4000, // 切换间隔
+        "colorLable": '' // 切换背景色的标签
+    }, options);
+    // 结构初始化
+    var switchGreate = function () {
+        var switchStr = '';
+        var switchList = _this.find('li');
+        focusLength = switchList.length;
+        // 判断是否有内容
+        if (focusLength) {
+            // 循环设置模版
+            switchList.each(function (i) {
+                var page = ++i;
+                if (page == 1) {
+                    switchStr += '<span focusId="' + page + '" class="current">' + page + '</span>';
+                } else {
+                    switchStr += '<span focusId="' + page + '">' + page + '</span>';
+                }
+                $(this).attr('switch-page', page);
+            });
+            switchStr = '<a href="javascript:void(0)" focusId="' + focusLength + '" class="focus-prev-btn"><span><i></i></span></a><a href="javascript:void(0)" focusId="2" class="focus-next-btn"><span><i></i></span></a><div class="focus-switch">' + switchStr + '</div>';
+            $('.focus-box').append(switchStr);
+            // 设置基本交互
+            $(".focus-box").mouseenter(function () {
+                switchStop();
+                $(this).children(".focus-prev-btn").show();
+                $(this).children(".focus-next-btn").show();
+            }).mouseleave(function () {
+                switchPlay();
+                $(this).children(".focus-prev-btn").hide();
+                $(this).children(".focus-next-btn").hide();
+            });
+            // 翻页选择效果
+            $(".focus-switch > span").mouseover(function () {
+                switchShow($(this).attr('focusId'));
+            });
+            // 翻页点击效果
+            $(".focus-prev-btn, .focus-next-btn").click(function () {
+                switchShow($(this).attr('focusId'));
+            });
+            // 自动翻页
+            switchPlay();
+        }
+    };
+    var setFocusId = function (id) {
+        focusId = parseInt(id);
+        $(".focus-switch span[focusid='" + focusId + "']").addClass('current').siblings().removeClass('current');
+        var preId = focusId - 1 < 1 ? focusLength : focusId - 1;
+        $(".focus-prev-btn").attr('focusId', preId);
+        var nextId = focusId + 1 > focusLength ? 1 : focusId + 1;
+        $(".focus-next-btn").attr('focusId', nextId);
+    };
+    var switchShow = function (id) {
+        setFocusId(id);
+        if (settings.colorLable) {
+            var color = $('#focusList li[switch-page=' + id + ']').attr('color');
+            $(settings.colorLable).css('background', color);
+        }
+        $('#focusList li[switch-page=' + id + ']').fadeIn(settings.speed).siblings().hide();
+    };
+    var switchPlay = function () {
+        autoFocus = setInterval(function () {
+            var id = focusId + 1 > focusLength ? 1 : focusId + 1;
+            switchShow(id);
+        }, settings.timeout);
+    };
+    var switchStop = function () {
+        clearInterval(autoFocus);
+    };
+    switchGreate();
+};

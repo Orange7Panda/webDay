@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" href="../css/reset.min.css">
+		<link rel="stylesheet" href="../css/login.min.css">
+		<script src = "../js/require.js" async = "true" defer data-main = "../js/main_login"></script>
+	</head>
+	<body>
+		<div class = "outermost">
+			<!-- 头部 -->
+			<header class = "clear">
+				<!-- logo -->
+				<div class = "logo">
+					<a href="../index.html">
+						<img src="../images/img_login/logo_130x60.png" alt="">
+						<p>中关村在线旗下网上商城</p>
+					</a>
+				</div>
+				<!-- 注册 -->
+				<div class = "register">
+					<a href="register.html">立即注册</a>还没有Z商城账号？
+				</div>
+			</header>
+			<!-- 登录页主要内容 -->
+			<section>
+				<div class = "outer clear">
+					<!-- 左边的图片链接首页 -->
+					<div class = "left">
+						<div>
+							<a href="../index.html">
+								<img src="../images/img_login/ad2_1.jpg" alt="">
+							</a>
+						</div>
+					</div>
+					<!-- 右边的登录框 -->
+					<div class = "right">
+						<!-- 登录框的头部 -->
+						<div class = "login_head clear">
+							<h3 class = "active">登录Z商城</h3>
+							<h3>商家登录</h3>
+						</div>
+						<!-- 头部之外的主体 -->
+						<div class = "login_major">
+							<!-- 正常的用户名密码登录 -->
+							<div class = "login_common">
+								<!-- 填写错误时的提示信息 -->
+								<div class = "login_common_wrong_tips" style = "display: none;">登录失败，用户名或密码错误</div>
+								<!-- 用户名框 -->
+								<div class = "username">
+									<input type="text" placeholder = "手机号/邮箱/用户名" class = "text">
+									<i class = "close" style = "display: none;"></i>
+									<ul class = "account_list" style = "display: none;"></ul>
+								</div>
+								<!-- 密码框 -->
+								<div class = "password">
+									<input type="password" placeholder = "密码" class = "text">
+									<i class = "close" style = "display: none;"></i>
+									<span class = "case_tips" style = "display: none;">大小写锁定已打开
+										<i class = "iconfont"></i>
+									</span>
+								</div>
+								<!-- 手机动态码登录和忘记密码 -->
+								<div class = "other clear">
+									<label for="" class = "autologon"></label>
+									<a href="" class = "other_login"> &nbsp; &nbsp; &nbsp;&nbsp;手机动态码登录</a>
+									<a href="" class = "forget_password">忘记密码？</a>
+								</div>
+								<input type="hidden" value = "2">
+								<input type="button" class = "login_btn" value = "登 录">
+								<span class = "submit_loading" style = "display: none;">正在登录...</span>
+							</div>
+							<!-- 手机动态码登录 -->
+							<div class = "login_mobile" style = "display: none;">
+								<!-- 填写错误时的提示信息 -->
+								<div class = "login_mobile_wrong_tips" style = "display: none;"></div>
+								<!-- 手机号 -->
+								<div class = "form-item">
+									<input class = "text" type="text" placeholder = "手机号" name="">
+								</div>
+								<!-- 点击验证 -->
+								<div class = "form-item captcha-item"></div>
+								<!-- 短信验证码 -->
+								<div class = "form-item phone-number"></div>
+							</div>
+							<!-- 合作账号登录 -->
+							<div class = "login_title clear">
+								<div class = "border"></div>
+								<p>合作账号登录</p>
+								<div class = "border"></div>
+							</div>
+							<!-- 四个链接登录 -->
+							<div class = "login_footer clear">
+								<a  class = "weixin" target = "_blank" href="http://service.zol.com.cn/user/api/weixin/jump.php?backurl=http%3A%2F%2Fwww.zol.com%2F">用微信账号登录</a>
+								<a  class = "sina" target = "_blank" href="http://service.zol.com.cn/user/api/sina/jump.php?comeshop=1&backurl=http%3A%2F%2Fwww.zol.com%2F">用微博账号登录</a>
+								<a  class = "qq" target = "_blank" href="http://service.zol.com.cn/user/api/qq/libs/oauth/redirect_to_login.php?comeshop=1&backurl=http%3A%2F%2Fwww.zol.com%2F">用QQ账号登录</a>
+								<a  class = "alipay" target = "_blank" href="http://tuan.zol.com/userBinding/alipay/alipay.auth.authorize_php_gb/alipay_auth_authorize.php?fromUrl=http%3A%2F%2Fwww.zol.com%2F">用支付宝账号登录</a>
+								<a  class = "baidu" target = "_blank" href="http://service.zol.com.cn/user/api/baidu/jump.php?comeshop=1&backurl=http%3A%2F%2Fwww.zol.com%2F">用百度账号登录</a>
+							</div>
+						</div>
+						<div class = "login_major" style = "display: none;">
+							<!-- 正常的用户名密码登录 -->
+							<div class = "login_common">
+								<!-- 填写错误时的提示信息 -->
+								<div class = "login_common_wrong_tips" style = "display: none;">登录失败，用户名或密码错误</div>
+								<!-- 用户名框 -->
+								<div class = "username">
+									<input type="text" placeholder = "用户名" class = "text">
+									<i class = "close" style = "display: none;"></i>
+									<ul class = "account_list" style = "display: none;"></ul>
+								</div>
+								<!-- 密码框 -->
+								<div class = "password">
+									<input type="password" placeholder = "密码" class = "text">
+									<i class = "close" style = "display: none;"></i>
+									<span class = "case_tips" style = "display: none;">大小写锁定已打开
+										<i class = "iconfont"></i>
+									</span>
+								</div>
+								<div class = "other clear">
+									<label for="" class = "autologon"></label>
+									<a href="" class = "forget_password">忘记密码？</a>
+								</div>
+								<input type="hidden" value = "2">
+								<input type="button" class = "login_btn" value = "登 录">
+								<span class = "submit_loading" style = "display: none;">正在登录...</span>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- 页面底部 -->
+		<footer>
+			<div class = "outer clear">
+				<!-- 左侧 -->
+				<div class = "about">
+					<a href="http://www.rongroad.com/" target = "_blank">关于Z商城</a>|
+					<a href="http://www.rongroad.com/" target = "_blank">联系我们</a>|
+					<a href="http://help.zol.com/" target = "_blank">帮助中心</a>
+				</div>
+				<!-- 右侧 -->
+				<div class = "copyright">
+					©20192019. 中关村在线 版权所有
+				</div>
+			</div>
+		</footer> 
+	</body>
+</html>

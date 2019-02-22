@@ -1,0 +1,574 @@
+body{
+	font: 12px/1.5 "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+	color: #333;
+}
+/*最顶部栏*/
+.zc_topbar{
+	position: relative;
+	z-index: 997;
+	height: 29px;
+	font: 12px/29px arial;
+	background: #f5f5f5;
+	border-bottom: 1px solid #e6e6e6;
+}
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+/*最顶部栏的左侧*/
+.zc_topbar .wrapper .zc_login_info{
+	float: left;
+}
+.zc_topbar .wrapper .zc_login_info .zc_home{
+	padding: 0 20px 0 0;
+}
+.zc_topbar .wrapper .zc_login_info .zc_home a{
+	color: #666;
+	text-decoration: none;
+}
+.zc_topbar .wrapper .zc_login_info .zc_home a:hover, .zc_topbar .wrapper .zc_login_info .zc_login a:hover, .zc_topbar .wrapper .zc_login_info .zc_register a:hover{
+	color: #c00;
+	text-decoration: underline;
+}
+.zc_topbar .wrapper .zc_login_info .zc_login{
+	padding: 0 20px 0 0;
+	color: #666;
+}
+.zc_topbar .wrapper .zc_login_info .zc_login a, .zc_topbar .wrapper .zc_login_info .zc_register a{
+	color: #36c;
+	text-decoration: none;
+}
+/*最顶部栏的右侧*/
+.zc_topbar .wrapper .zc_quick_menu{
+	float: right;
+	margin: 0 -10px 0 0;
+}
+.zc_topbar .wrapper .zc_quick_menu li{
+	float: left;
+	margin: 0 10px;
+	height: 29px;
+	font: 12px/29px arial;
+}
+.zc_topbar .wrapper .zc_quick_menu li a{
+	display: inline-block;
+	color: #666;
+	text-decoration: none;
+}
+.zc_topbar .wrapper .zc_quick_menu li a:hover{
+	color: #c00;
+	text-decoration: underline;
+}
+/*买家中心*/
+.zc_topbar .wrapper .zc_quick_menu .zc_my_center{
+	margin: 0;
+}
+.zc_topbar .wrapper .zc_quick_menu .zc_hd{
+	position: relative;
+	padding: 0 23px 0 10px;
+}
+.zc_topbar .wrapper .zc_quick_menu .zc_hd .ico{
+	background: url(../images/img_index/topbar_ico.png) 0 -45px no-repeat;
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	width:7px;
+	height: 4px;
+}
+/*分割线*/
+.zc_topbar .wrapper .zc_quick_menu .zc_separator{
+	color: #ccc;
+}
+/*手机商城*/
+.zc_topbar .wrapper .zc_quick_menu .zc_mobile{
+	margin: 0;
+}
+.zc_topbar .wrapper .zc_quick_menu .zc_mobile .zc_mobile_hd{
+	padding: 0 23px 0 25px;
+	background: url(../images/img_index/topbar_ico.png) 0 0 no-repeat;
+}
+/*头部*/
+.header{
+	padding: 30px 0;
+	background: #fff;
+}
+/*logo*/
+.header .wrapper .logo{
+	float: left;
+}
+.header .wrapper .logo a{
+	display: block;
+	width: 130px;
+	height: 60px;
+	background: url(../images/img_index/logo_130x60.png) no-repeat;
+	font: 0/0 arial;
+	overflow: hidden;
+}
+/*城市定位*/
+.header .wrapper .city_location{
+	float: left;
+	position: relative;
+	margin: 10px 0 0 20px;
+	border: 1px solid #e6e6e6;
+	z-index: 103;
+}
+.header .wrapper .city_location .city_name{
+	display: block;
+	position: relative;
+	padding: 0 26px 0 12px;
+	height: 26px;
+	font: 14px/26px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+	color: #333;
+	background: #fff;
+	z-index: 5;
+	cursor: pointer;
+}
+.header .wrapper .city_location .city_name .icon{
+	position: absolute;
+	background: url(../images/img_index/head.png) -28px -155px no-repeat;
+	right: 12px;
+	top: 11px;
+	width: 9px;
+	height: 5px;
+	font: 0/0 arial;
+}
+/*快速入口*/
+.header .wrapper .quick_entry{
+	float: right;
+	margin: 0 0 0 65px;
+	padding: 7px 0 0;
+}
+.header .wrapper .quick_entry a{
+	position: relative;
+	float: right;
+	margin: 0 0 0 20px;
+	font: 14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+	color: #333;
+}
+.header .wrapper .quick_entry a:hover{
+	color: #f33;
+	text-decoration: none;
+}
+.header .wrapper .quick_entry .ico{
+	background: url(../images/img_index/head.png) no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font: 0/0 arial;
+}
+.header .wrapper .quick_entry .number{
+	position: absolute;
+	left: 12px;
+	top: 1px;
+	padding: 0 3px;
+	height: 13px;
+	font: 12px/13px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+	color: #fff;
+	background: #f33;
+	border-radius: 10px;
+}
+/*购物车*/
+.header .wrapper .quick_entry .cart{
+	padding: 0 0 0 24px;
+}
+.header .wrapper .quick_entry .cart .ico{
+	top: 9px;
+	width: 18px;
+	height: 18px;
+	background-position: 0 -211px;
+}
+.header .wrapper .quick_entry .cart:hover .ico{
+	background-position: -32px -211px;
+}
+/*优惠券*/
+.header .wrapper .quick_entry .coupon{
+	padding: 0 0 0 27px;
+}
+.header .wrapper .quick_entry .coupon .ico{
+	top: 9px;
+	width: 22px;
+	height: 18px;
+	background-position: 0 -190px;
+}
+.header .wrapper .quick_entry .coupon:hover .ico{
+	background-position: -28px -190px;
+}
+/*订单*/
+.header .wrapper .quick_entry .order{
+	padding: 0 0 0 28px;
+}
+.header .wrapper .quick_entry .order .ico{
+	top: 8px;
+	width: 20px;
+	height: 20px;
+	background-position: 0 -167px;
+}
+.header .wrapper .quick_entry .order:hover .ico{
+	background-position: -30px -167px;
+}
+/*查找*/
+.header .wrapper .search_box{
+	float: right;
+	margin: 7px 0 0 0;
+	.search{
+		position: relative;
+		z-index: 102;
+		width: 536px;
+		height: 32px;
+		border: 2px solid #ec3639;
+		.search_text{
+			padding: 6px 10px;
+			width: 441px;
+			height: 20px;
+			font: 14px/20px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+			color: #666;
+			border: 0 none;
+			outline: 0 none;
+		}
+		.search_btn{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 75px;
+			height: 32px;
+			font: 16px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+			color: #fff;
+			border: 0 none;
+			background: #ec3639;
+			outline: 0 none;
+			cursor: pointer;
+			text-align: center;
+		}
+		.search_hot_words{
+			position: absolute;
+			top: 7px;
+			right: 85px;
+			a{
+				display: inline-block;
+				margin: 0 0 0 5px;
+				padding: 0 5px;
+				font: 12px/18px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+				background: #eee;
+				color: #757575;
+				-webkit-transition: all 0.2s;
+				transition: all 0.2s;
+				&:hover{
+					background: #ec3639;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+/*导航栏*/
+.nav_box .wrapper .nav{
+	padding-left: 180px;
+}
+.nav_box{
+	position: relative;
+	z-index: 101;
+	background: #fff;
+	/*导航右侧*/
+	.wrapper .nav li{
+		float: left;
+		padding: 0 30px 0 0;
+		height: 39px;
+		font: 18px/39px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+		a{
+			float: left;
+			padding: 0 10px;
+			color: #333;
+		}
+	}
+	.wrapper .nav .current a{
+		color: #f33;
+	}
+	/*导航左侧*/
+	.wrapper .category_nav{
+		float: left;
+		display: block;
+		position: relative;
+		margin: -39px 0 0;
+		width: 160px;
+		height: 39px;
+		background: #ec3639;
+		z-index: 20;
+		/*导航的头部*/
+		.category_nav_header{
+			padding: 0 0 0 52px;
+			font: 16px/38px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+			color: #fff;
+			cursor: pointer;
+			.ico{
+				position: absolute;
+				top: 14px;
+				left: 26px;
+				width: 12px;
+				height: 10px;
+				background: url(../images/img_index/head.png) 0 -154px no-repeat;
+			}
+		}
+		/*导航的身体*/
+		.category_nav_body{
+			display: block;
+			position: absolute;
+			top: 39px;
+			left: 0;
+			width: 160px;
+			background: #fff;
+			.category_items{
+				position: relative;
+				height: 400px;
+				overflow: hidden;
+				background: #454545;
+				z-index: 3;
+				.item{
+					position: relative;
+					margin: -1px 10px 0;
+					padding: 0 0 0 42px;
+					height: 54px;
+					border-top: 1px solid #4d4d4d;
+					i{
+						position: absolute;
+						background: url(../images/img_index/head.png) no-repeat;
+					}
+					h3{
+						position: relative;
+						height: 54px;
+						overflow: hidden;
+						font: 16px/54px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+						a{
+							color: #fff;
+						}
+						i{
+							position: absolute;
+							top: 23px;
+							right: 12px;
+							width: 6px;
+							height: 11px;
+							background-position: -44px -154px;
+						}
+					}
+					@mixin category_items_icon($left: 16px, $top: 17px, $width: 13px, $height: 18px, $background: 0 0){
+						left: $left;
+						top: $top;
+						width: $width;
+						height: $height;
+						background-position: $background;
+					}
+					.icon_01{
+						@include category_items_icon;
+					}
+					.icon_02{
+						@include category_items_icon(12px, 20px, 20px, 16px, 0 -21px);
+					}
+					.icon_07{
+						@include category_items_icon(13px, 19px, 19px, 18px, 0 -133px);
+					}
+					.icon_03{
+						@include category_items_icon(12px, 17px, 20px, 18px, 0 -40px);
+					}
+					.icon_04{
+						@include category_items_icon(15px, 11px, 15px, 27px, 0 -61px);
+					}
+					.icon_05{
+						@include category_items_icon(13px, 18px, 19px, 17px, 0 -91px);
+					}
+				}
+			}
+		}
+	}
+}
+/*banner图*/
+.focus_banner{
+	position: relative;
+	height: 400px;
+	min-width: 1200px;
+	overflow: hidden;
+	.focus_box{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 1920px;
+		height: 400px;
+		margin: 0 0 0 -960px;
+		overflow: hidden;
+		.bx_wrapper{
+			max-width: 100%;
+			position: relative;
+			.bx_viewport{
+				width: 100%;
+				overflow: hidden;
+				position: relative;
+				height: 400px;
+				.focus_list{
+					position:relative;
+					width: auto;
+					height: 400px;
+					overflow: hidden;
+					li{
+						float: none; 
+						list-style: outside none none; 
+						position: absolute; 
+						width: 1920px; 
+						height: 100%;
+						z-index: 0; 
+						/*display: none;*/
+						a{
+							display: block;
+							width: 100%;
+							height: 100%;
+							img{
+								width: 100%;
+								height: 100%;
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+			}
+			.bx_controls{
+				.bx_paper{
+					position: absolute;
+					z-indx: 51;
+					left: 50%;
+					bottom: 10px;
+					width: 1200px;
+					height: 10px;
+					margin: 0 0 0 -600px;
+					overflow: hidden;
+					font: 0/0 arial;
+					text-align: center;
+					text-indent: 1px;
+					.bx_pager_item, .bx_pager_item a{
+						display: inline-block;
+						width: 10px;
+						height: 10px;
+						vertical-align: top;
+						font: 0/0 arial;
+						overflow: hidden;
+					}
+					.bx_pager_item{
+						margin: 0 3px 0 2px;
+						text-indent: 0;
+						display: inline;
+						a{
+							border-radius: 5px;
+							background: #f6f6f6;
+						}
+						.active{
+							background-color: #ce1a1b;
+						}
+					}
+				}
+				.bx_controls_direction{
+					.bx_prev, .bx_next{
+						position: absolute;
+						top: 50%;
+						width: 62px;
+						height: 94px;
+						z-index: 100;
+						&:hover{
+							.bg_mask{
+								display: block;
+							}
+						};
+						.bg_mask{
+							display: none;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 62px;
+							height: 94px;
+							background: #000;
+							opacity: 0.5;
+						}
+						.arrow{
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 62px;
+							height: 94px;
+							background: url(../images/img_index/arrow.png) no-repeat;
+						}
+					}
+					.bx_prev{
+						left: 50%;
+						background-position: left -94px;
+						margin: -47px 0 0 -662px;
+						.arrow{
+							background-position: left -94px;
+						}
+					}
+					.bx_next{
+						right: 50%;
+						background-position: left top;
+						margin: -47px -662px 0 0;
+						.arrow{
+							background-position: left top;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*页面主要内容*/
+.wrapper{
+	/*团购 轻松省*/
+	.section{
+		padding: 34px 0 0;
+		.tuan_region{
+			/*团购 banner*/
+			.tuan_region_banner{
+				position: relative;
+				float: left;
+				width: 160px;
+				height: 562px;
+				.pic{
+					width: 181px;
+					height: 587px;
+					position: absolute;
+					right: -2px;
+					bottom: 0;
+				}
+				.more_tuan{
+					position: absolute;
+					bottom: 43px;
+					left: 27px;
+					width: 107px;
+					height: 31px;
+					line-height: 31px;
+					text-align: center;
+					font-size: 16px;
+					color: #fff;
+					background: url(../images/img_index/moreTuan.png) no-repeat center;
+				}
+			}
+			/*到店团*/
+			.tuan_ware_arrival{
+				float: right;
+				width: 356px;
+				.item{
+					height: 140px;
+					padding: 30px 20px 17px;
+					background: #fff;
+					.pic{
+						position: relative;
+						float: left;
+						width: 140px;
+						height: 140px;
+						img{
+							width: 140px;
+							height: 140px;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+			/*团购商品*/
+			.tuan_ware_list{
+
+			}
+		}
+	}
+}

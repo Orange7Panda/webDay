@@ -1,0 +1,163 @@
+@charset "UTF-8";
+body {
+  margin: 50px 0;
+  text-align: center;
+  font: 12px/1.5 Arial;
+  color: #333; }
+
+.outermost {
+  margin: 0 auto;
+  width: 990px; }
+
+/*header 头部*/
+.outermost header {
+  padding-top: 14px;
+  padding: 20px 0; }
+
+/*logo*/
+.outermost header .logo {
+  float: left; }
+
+.outermost header .logo a {
+  float: left;
+  color: #134ba0; }
+
+.outermost header .logo a img {
+  float: left;
+  width: 130px;
+  height: 60px;
+  border: 0; }
+
+.outermost header .logo a p {
+  float: left;
+  margin: 8px 0 0 8px;
+  padding-left: 10px;
+  font: 14px/44px simsun;
+  color: #666;
+  border-left: 1px solid #e6e6e6; }
+
+/*登录链接*/
+.outermost header .register {
+  float: right;
+  padding: 21px 0 0;
+  font-size: 14px;
+  line-height: 22px; }
+
+.outermost header .register a {
+  float: right;
+  height: 16px;
+  padding: 3px 10px;
+  color: #c00;
+  font: normal 14px/14px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1"; }
+
+.outermost header .register a:hover {
+  background: #c00;
+  color: white; }
+
+/*页面主要内容*/
+.register_wrap {
+  padding: 0 0 100px;
+  border: 1px solid #e6e6e6;
+  width: 980px;
+  margin: auto; }
+
+/*小标题*/
+.register_wrap .title {
+  padding: 16px 0 16px 90px;
+  background: #fafafa;
+  font: 18px/28px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+  color: #999; }
+
+/*注册主体*/
+.register_wrap form .register_module {
+  float: left;
+  padding: 30px 0 0 89px;
+  width: 500px; }
+
+/*用手机号注册的方式*/
+.register_wrap form .register_module .register_tab {
+  height: 39px;
+  border-bottom: 1px solid #e6e6e6; }
+
+.register_wrap form .register_module .register_tab li {
+  float: left;
+  position: relative;
+  width: 250px;
+  border: 1px solid #e6e6e6;
+  border-bottom: 0 none;
+  text-align: center; }
+
+.register_wrap form .register_module .register_tab .current {
+  margin: 0 -1px -1px;
+  padding: 0 0 2px;
+  border-top: 2px solid #e02d2d;
+  background: #fff;
+  cursor: default; }
+
+.register_wrap form .register_module .register_tab .current .phone_number {
+  display: inline-block;
+  font: 18px/38px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+  background: url(../images/img_register/login-bg.png) no-repeat;
+  background-position: -158px -235px;
+  color: #c00;
+  line-height: 36px;
+  padding: 0 0 0 20px; }
+
+/*手机号*/
+.register_wrap form .register_module .register_phone_number {
+  padding: 30px 0 0; }
+
+.register_wrap form .register_module .register_phone_number .register_form {
+  position: relative;
+  margin: 0 0 42px;
+  padding: 0 0 0 83px; }
+
+/*左边的字*/
+.register_wrap form .register_module .register_phone_number .register_form .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 83px;
+  font: 14px/40px "Arial";
+  text-align: right;
+  color: #666; }
+
+.register_wrap form .register_module .register_phone_number .register_form .label .xh {
+  padding: 0 7px 0 0;
+  font-size: 12px;
+  font-family: "Simsun";
+  color: #f30; }
+
+/*右边的框*/
+/*页面底部*/
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 50px 0 0;
+  padding: 12px 0 25px;
+  border-top: 1px solid #dcdcdc; }
+
+footer .outer {
+  width: 990px;
+  margin: 0 auto; }
+
+/*页面底部的左侧*/
+footer .outer .about {
+  float: left;
+  margin: 0 0 0 -10px;
+  color: #ccc; }
+
+footer .outer .about a {
+  margin: 0 10px;
+  color: #666; }
+
+footer .outer .about a:hover {
+  color: #c00;
+  text-decoration: underline; }
+
+/*页面底部的右侧*/
+footer .outer .copyright {
+  float: right;
+  color: #666; }

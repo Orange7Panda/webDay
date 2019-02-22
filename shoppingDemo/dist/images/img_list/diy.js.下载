@@ -1,0 +1,44 @@
+// 达人推荐
+$('#recommendList li').mouseenter(function () {
+    $(this).stop().animate({'width': "720px"}, 800).siblings().stop().animate({'width': "240px"}, 800);
+});
+// 特色服务
+$(".prompt").hover(
+        function () {
+            $(this).addClass("prompt-hover");
+        },
+        function () {
+            $(this).removeClass("prompt-hover");
+        }
+);
+// 楼层分类切换
+$(".tab-bar li").mouseenter(function () {
+    var rel = $(this).attr('rel');
+    $(this).addClass('current').siblings().removeClass('current');
+    $('.figure-list[rel=' + rel + ']').show().siblings('.figure-list').hide();
+    $('.ranking-list[rel=' + rel + ']').show().siblings('.ranking-list').hide();
+});
+// 排行榜切换
+$('.ranking-list li[class!=all-cur]').mouseenter(function () {
+    $(this).addClass('cur').siblings().removeClass('cur');
+});
+// 收藏商品
+$('.attention').click(function () {
+    var _this = $(this);
+    var goodsId = $(this).attr('goodsId');
+    var goodsName = $(this).attr('goodsName');
+    var goodsPrice = $(this).attr('goodsPrice');
+    if (z_user_id == "") {
+        alert('请先登录商城');
+        return;
+    }
+    var url = "/index.php?c=Channel_DIY&a=AjaxGoodsFollow&t=" + Math.random();
+    $.getJSON(url, {goodsId: goodsId, goodsName: goodsName, goodsPrice: goodsPrice}, function (data) {
+        if (data.flag) {
+            _this.find('b').html(data.number);
+            _this.find('span').html(data.msg);
+        } else {
+            alert(data.msg);
+        }
+    });
+});
